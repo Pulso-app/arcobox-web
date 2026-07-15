@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcobox — Estudio de arquitectura en Barcelona</title>
+  <meta name="description" content="Arcobox es el estudio de arquitectura de Xavier Oliete en Gràcia, Barcelona. Obra nueva, rehabilitación de edificios y pisos, dirección de obra, cédulas de habitabilidad e informes técnicos.">
+  <meta property="og:title" content="Arcobox — Estudio de arquitectura en Barcelona">
+  <meta property="og:description" content="Obra nueva, rehabilitación, dirección de obra y consultoría técnica en Barcelona.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' fill='%23F1EBDF' stroke='%2317140E' stroke-width='3'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-weight='bold' font-size='19' text-anchor='middle' fill='%23BC4B22'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Archivo:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+
+  <!-- Marcas de registro de plano (decorativas) -->
+  <div class="marks" aria-hidden="true">
+    <span class="mark mark-tl"></span>
+    <span class="mark mark-tr"></span>
+    <span class="mark mark-bl"></span>
+    <span class="mark mark-br"></span>
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Arcobox — inicio">
+      <span class="logo-box">ARCOBOX</span>
+      <span class="logo-sub mono">arquitectura · bcn</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#estudio" data-i18n="nav.studio">Estudio</a>
+      <a href="#servicios" data-i18n="nav.services">Servicios</a>
+      <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+      <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="lang mono" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="ca">CA</button>
+      <button type="button" data-lang="es">ES</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="kicker mono" data-i18n="hero.kicker">Estudio de arquitectura · Barcelona</p>
+          <h1 class="hero-title" data-i18n-html="hero.title">Proyectamos <em>obra nueva</em>.<br>Rehabilitamos <em>lo construido</em>.</h1>
+          <p class="lead" data-i18n="hero.lead">Arquitectura, consultoría y dirección de obra desde el barrio de Gràcia. Del primer croquis a la entrega de llaves.</p>
+          <div class="hero-cta">
+            <a class="btn btn-solid" href="#proyectos" data-i18n="hero.cta1">Ver proyectos</a>
+            <a class="btn" href="#contacto" data-i18n="hero.cta2">Hablemos</a>
+          </div>
+          <div class="dimline mono" aria-hidden="true">
+            <span class="dim-cap"></span>
+            <span class="dim-label">C/ Joan Blanques 47 · 08012 BCN</span>
+            <span class="dim-cap"></span>
+          </div>
+        </div>
+
+        <figure class="hero-art reveal">
+          <svg viewBox="0 0 380 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dibujo de alzado de un edificio de Gràcia">
+            <g stroke="var(--ink)" stroke-width="1.5" fill="none" stroke-linecap="square">
+              <!-- sol -->
+              <circle cx="46" cy="58" r="18" stroke="var(--accent)" stroke-dasharray="3 4"/>
+              <!-- línea de suelo + rayado -->
+              <line x1="16" y1="470" x2="364" y2="470" stroke-width="2"/>
+              <g stroke-width="1" opacity="0.65">
+                <line x1="34" y1="470" x2="24" y2="482"/><line x1="62" y1="470" x2="52" y2="482"/>
+                <line x1="90" y1="470" x2="80" y2="482"/><line x1="118" y1="470" x2="108" y2="482"/>
+                <line x1="146" y1="470" x2="136" y2="482"/><line x1="174" y1="470" x2="164" y2="482"/>
+                <line x1="202" y1="470" x2="192" y2="482"/><line x1="230" y1="470" x2="220" y2="482"/>
+                <line x1="258" y1="470" x2="248" y2="482"/><line x1="286" y1="470" x2="276" y2="482"/>
+                <line x1="314" y1="470" x2="304" y2="482"/><line x1="342" y1="470" x2="332" y2="482"/>
+              </g>
+              <!-- volumen -->
+              <rect x="70" y="80" width="240" height="390"/>
+              <line x1="62" y1="80" x2="318" y2="80" stroke-width="2.5"/>
+              <line x1="66" y1="96" x2="314" y2="96"/>
+              <rect x="120" y="58" width="20" height="22"/>
+              <!-- forjados -->
+              <line x1="70" y1="180" x2="310" y2="180" opacity="0.4"/>
+              <line x1="70" y1="280" x2="310" y2="280" opacity="0.4"/>
+              <line x1="70" y1="380" x2="310" y2="380" opacity="0.4"/>
+              <!-- P3 -->
+              <g>
+                <rect x="95" y="112" width="50" height="60"/><line x1="120" y1="112" x2="120" y2="172"/>
+                <rect x="235" y="112" width="50" height="60"/><line x1="260" y1="112" x2="260" y2="172"/>
+                <rect x="86" y="172" width="68" height="5"/><rect x="226" y="172" width="68" height="5"/>
+                <line x1="86" y1="146" x2="154" y2="146"/><line x1="226" y1="146" x2="294" y2="146"/>
+                <g stroke-width="1" opacity="0.7">
+                  <line x1="94" y1="146" x2="94" y2="172"/><line x1="102" y1="146" x2="102" y2="172"/><line x1="110" y1="146" x2="110" y2="172"/><line x1="130" y1="146" x2="130" y2="172"/><line x1="138" y1="146" x2="138" y2="172"/><line x1="146" y1="146" x2="146" y2="172"/>
+                  <line x1="234" y1="146" x2="234" y2="172"/><line x1="242" y1="146" x2="242" y2="172"/><line x1="250" y1="146" x2="250" y2="172"/><line x1="270" y1="146" x2="270" y2="172"/><line x1="278" y1="146" x2="278" y2="172"/><line x1="286" y1="146" x2="286" y2="172"/>
+                </g>
+              </g>
+              <!-- P2 -->
+              <g>
+                <rect x="95" y="196" width="50" height="64"/><line x1="120" y1="196" x2="120" y2="260"/>
+                <rect x="235" y="196" width="50" height="64"/><line x1="260" y1="196" x2="260" y2="260"/>
+                <rect x="86" y="260" width="68" height="5"/><rect x="226" y="260" width="68" height="5"/>
+                <line x1="86" y1="232" x2="154" y2="232"/><line x1="226" y1="232" x2="294" y2="232"/>
+                <g stroke-width="1" opacity="0.7">
+                  <line x1="94" y1="232" x2="94" y2="260"/><line x1="102" y1="232" x2="102" y2="260"/><line x1="110" y1="232" x2="110" y2="260"/><line x1="130" y1="232" x2="130" y2="260"/><line x1="138" y1="232" x2="138" y2="260"/><line x1="146" y1="232" x2="146" y2="260"/>
+                  <line x1="234" y1="232" x2="234" y2="260"/><line x1="242" y1="232" x2="242" y2="260"/><line x1="250" y1="232" x2="250" y2="260"/><line x1="270" y1="232" x2="270" y2="260"/><line x1="278" y1="232" x2="278" y2="260"/><line x1="286" y1="232" x2="286" y2="260"/>
+                </g>
+              </g>
+              <!-- P1 -->
+              <g>
+                <rect x="95" y="296" width="50" height="64"/><line x1="120" y1="296" x2="120" y2="360"/>
+                <rect x="235" y="296" width="50" height="64"/><line x1="260" y1="296" x2="260" y2="360"/>
+                <rect x="86" y="360" width="68" height="5"/><rect x="226" y="360" width="68" height="5"/>
+                <line x1="86" y1="332" x2="154" y2="332"/><line x1="226" y1="332" x2="294" y2="332"/>
+                <g stroke-width="1" opacity="0.7">
+                  <line x1="94" y1="332" x2="94" y2="360"/><line x1="102" y1="332" x2="102" y2="360"/><line x1="110" y1="332" x2="110" y2="360"/><line x1="130" y1="332" x2="130" y2="360"/><line x1="138" y1="332" x2="138" y2="360"/><line x1="146" y1="332" x2="146" y2="360"/>
+                  <line x1="234" y1="332" x2="234" y2="360"/><line x1="242" y1="332" x2="242" y2="360"/><line x1="250" y1="332" x2="250" y2="360"/><line x1="270" y1="332" x2="270" y2="360"/><line x1="278" y1="332" x2="278" y2="360"/><line x1="286" y1="332" x2="286" y2="360"/>
+                </g>
+              </g>
+              <!-- planta baja -->
+              <rect x="90" y="410" width="50" height="60"/>
+              <rect x="240" y="410" width="50" height="60"/>
+              <line x1="115" y1="410" x2="115" y2="470"/><line x1="265" y1="410" x2="265" y2="470"/>
+              <path d="M 165 470 V 418 Q 190 394 215 418 V 470" fill="var(--accent)" stroke="var(--ink)"/>
+              <!-- cota vertical -->
+              <g stroke-width="1">
+                <line x1="316" y1="80" x2="348" y2="80"/>
+                <line x1="316" y1="470" x2="348" y2="470"/>
+                <line x1="342" y1="80" x2="342" y2="470"/>
+                <line x1="337" y1="85" x2="347" y2="75"/>
+                <line x1="337" y1="475" x2="347" y2="465"/>
+              </g>
+            </g>
+            <text x="356" y="290" font-family="'Space Mono', monospace" font-size="11" fill="var(--ink)" transform="rotate(-90 356 290)" text-anchor="middle">PB + 3</text>
+          </svg>
+          <figcaption class="mono" data-i18n="hero.caption">Alzado tipo — Vila de Gràcia · E 1:100</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ══════════════ MARQUESINA ══════════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee-track"></div>
+    </div>
+
+    <!-- ══════════════ SERVICIOS ══════════════ -->
+    <section id="servicios" class="section">
+      <div class="section-head reveal">
+        <p class="kicker mono" data-i18n="services.kicker">01 — Qué hacemos</p>
+        <h2 data-i18n="services.title">Servicios</h2>
+        <p class="section-intro" data-i18n="services.intro">Cubrimos el ciclo completo del encargo: pensamos, dibujamos, tramitamos y dirigimos.</p>
+      </div>
+      <ol class="services-grid">
+        <li class="card reveal">
+          <span class="num" aria-hidden="true">01</span>
+          <h3 data-i18n="services.s1.t">Obra nueva</h3>
+          <p data-i18n="services.s1.d">Edificios de nueva planta, del solar a la entrega: vivienda unifamiliar y plurifamiliar, equipamientos y locales.</p>
+        </li>
+        <li class="card reveal">
+          <span class="num" aria-hidden="true">02</span>
+          <h3 data-i18n="services.s2.t">Rehabilitación</h3>
+          <p data-i18n="services.s2.d">Rehabilitación integral de edificios y reformas de pisos: estructura, fachadas, cubiertas e interiores.</p>
+        </li>
+        <li class="card reveal">
+          <span class="num" aria-hidden="true">03</span>
+          <h3 data-i18n="services.s3.t">Proyectos y dirección de obra</h3>
+          <p data-i18n="services.s3.d">Redacción de proyectos básicos y ejecutivos, dirección facultativa y coordinación durante toda la obra.</p>
+        </li>
+        <li class="card reveal">
+          <span class="num" aria-hidden="true">04</span>
+          <h3 data-i18n="services.s4.t">Cédulas de habitabilidad</h3>
+          <p data-i18n="services.s4.d">Inspección y tramitación de cédulas de primera y segunda ocupación, con gestión completa del expediente.</p>
+        </li>
+        <li class="card reveal">
+          <span class="num" aria-hidden="true">05</span>
+          <h3 data-i18n="services.s5.t">Informes técnicos</h3>
+          <p data-i18n="services.s5.d">ITE, certificados energéticos, diagnosis del estado del edificio, peritajes y valoraciones.</p>
+        </li>
+        <li class="card reveal">
+          <span class="num" aria-hidden="true">06</span>
+          <h3 data-i18n="services.s6.t">Asesoramiento</h3>
+          <p data-i18n="services.s6.d">Acompañamiento en compras de inmuebles, licencias, normativa urbanística y estudios de viabilidad.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ══════════════ PROCESO ══════════════ -->
+    <section class="section section-alt">
+      <div class="section-head reveal">
+        <p class="kicker mono" data-i18n="process.kicker">02 — Cómo trabajamos</p>
+        <h2 data-i18n="process.title">Fases del encargo</h2>
+      </div>
+      <ol class="process">
+        <li class="reveal">
+          <span class="mono p-num">F.01</span>
+          <h3 data-i18n="process.p1.t">Estudio previo</h3>
+          <p data-i18n="process.p1.d">Escuchamos, medimos y analizamos la normativa aplicable.</p>
+        </li>
+        <li class="reveal">
+          <span class="mono p-num">F.02</span>
+          <h3 data-i18n="process.p2.t">Proyecto</h3>
+          <p data-i18n="process.p2.d">Del anteproyecto al proyecto ejecutivo, con presupuesto realista.</p>
+        </li>
+        <li class="reveal">
+          <span class="mono p-num">F.03</span>
+          <h3 data-i18n="process.p3.t">Licencias</h3>
+          <p data-i18n="process.p3.d">Tramitación con el ayuntamiento y demás organismos.</p>
+        </li>
+        <li class="reveal">
+          <span class="mono p-num">F.04</span>
+          <h3 data-i18n="process.p4.t">Obra</h3>
+          <p data-i18n="process.p4.d">Dirección facultativa, control de calidad y de costes.</p>
+        </li>
+        <li class="reveal">
+          <span class="mono p-num">F.05</span>
+          <h3 data-i18n="process.p5.t">Entrega</h3>
+          <p data-i18n="process.p5.d">Fin de obra, legalizaciones y garantía posventa.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ══════════════ ESTUDIO ══════════════ -->
+    <section id="estudio" class="section">
+      <div class="section-head reveal">
+        <p class="kicker mono" data-i18n="studio.kicker">03 — El estudio</p>
+        <h2 data-i18n="studio.title">Un nombre, una caja</h2>
+      </div>
+      <div class="studio-grid">
+        <div class="acronym reveal" aria-label="ARCOBOX: Arquitectura Consulting Barcelona Oliete Xavier">
+          <div class="acr-row"><span class="acr-l">AR</span><span class="acr-w mono">Arquitectura</span></div>
+          <div class="acr-row"><span class="acr-l">CO</span><span class="acr-w mono">Consulting</span></div>
+          <div class="acr-row"><span class="acr-l">B</span><span class="acr-w mono">Barcelona</span></div>
+          <div class="acr-row"><span class="acr-l">O</span><span class="acr-w mono">Oliete</span></div>
+          <div class="acr-row"><span class="acr-l">X</span><span class="acr-w mono">Xavier</span></div>
+        </div>
+        <div class="studio-text reveal">
+          <p class="studio-p1" data-i18n="studio.p1">Arcobox son las siglas de Arquitectura Consulting Barcelona Oliete Xavier: el estudio fundado y dirigido por el arquitecto Xavier Oliete Bargués.</p>
+          <p data-i18n="studio.p2">Trabajamos entre la escala del edificio y la del detalle: obra nueva, rehabilitación y consultoría técnica para particulares, comunidades y promotores. Un interlocutor único desde el primer día hasta el final de obra.</p>
+          <div class="founder">
+            <span class="founder-badge" aria-hidden="true">X.O.</span>
+            <div>
+              <strong data-i18n="studio.name">Xavier Oliete Bargués</strong>
+              <span class="mono" data-i18n="studio.role">Arquitecto jefe y fundador</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ PROYECTOS ══════════════ -->
+    <section id="proyectos" class="section section-alt">
+      <div class="section-head reveal">
+        <p class="kicker mono" data-i18n="projects.kicker">04 — Trabajo</p>
+        <h2 data-i18n="projects.title">Proyectos</h2>
+        <p class="section-intro" data-i18n="projects.intro">Selección de obra construida y proyectos en curso.</p>
+      </div>
+      <div class="filters mono" role="tablist" aria-label="Filtro de proyectos">
+        <button type="button" class="active" data-filter="all" data-i18n="projects.fAll">Todos</button>
+        <button type="button" data-filter="obra-nueva" data-i18n="projects.fNew">Obra nueva</button>
+        <button type="button" data-filter="rehabilitacion" data-i18n="projects.fRehab">Rehabilitación</button>
+        <button type="button" data-filter="reforma" data-i18n="projects.fRef">Reformas</button>
+      </div>
+      <ul class="projects-grid" id="projects-grid"></ul>
+      <p class="projects-empty mono" id="projects-empty" hidden data-i18n="projects.empty">Muy pronto publicaremos aquí los proyectos del estudio.</p>
+    </section>
+
+    <!-- ══════════════ CONTACTO ══════════════ -->
+    <section id="contacto" class="section">
+      <div class="section-head reveal">
+        <p class="kicker mono" data-i18n="contact.kicker">05 — Contacto</p>
+        <h2 data-i18n="contact.title">Hablemos de tu proyecto</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="c-row">
+            <span class="c-label mono" data-i18n="contact.addressLabel">Estudio</span>
+            <p data-i18n-html="contact.address">C. de Joan Blanques, 47, bajos<br>08012 Barcelona — Vila de Gràcia</p>
+            <a class="btn btn-small" id="maps-link" href="#" target="_blank" rel="noopener" data-i18n="contact.mapLink">Cómo llegar</a>
+          </div>
+          <div class="c-row">
+            <span class="c-label mono" data-i18n="contact.emailLabel">Correo</span>
+            <p id="contact-email" class="pending mono" data-i18n="contact.pending">por confirmar</p>
+          </div>
+          <div class="c-row">
+            <span class="c-label mono" data-i18n="contact.phoneLabel">Teléfono</span>
+            <p id="contact-phone" class="pending mono" data-i18n="contact.pending">por confirmar</p>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form">
+          <label>
+            <span class="mono" data-i18n="form.name">Nombre</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            <span class="mono" data-i18n="form.email">Correo electrónico</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            <span class="mono" data-i18n="form.msg">Cuéntanos tu proyecto</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-solid" data-i18n="form.send">Enviar</button>
+          <p class="form-note mono" data-i18n="form.note">El formulario abre tu aplicación de correo.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════ PIE: CAJETÍN DE PLANO ══════════════ -->
+  <footer class="titleblock">
+    <div class="tb-grid">
+      <div class="tb-cell">
+        <span class="tb-label mono" data-i18n="tb.project">PROYECTO</span>
+        <span class="tb-value" data-i18n="tb.projectV">Sitio web de Arcobox</span>
+      </div>
+      <div class="tb-cell">
+        <span class="tb-label mono" data-i18n="tb.arch">ARQUITECTO</span>
+        <span class="tb-value">Xavier Oliete Bargués</span>
+      </div>
+      <div class="tb-cell">
+        <span class="tb-label mono" data-i18n="tb.scale">ESCALA</span>
+        <span class="tb-value">1:1</span>
+      </div>
+      <div class="tb-cell">
+        <span class="tb-label mono" data-i18n="tb.date">FECHA</span>
+        <span class="tb-value" id="tb-date">—</span>
+      </div>
+      <div class="tb-cell">
+        <span class="tb-label mono" data-i18n="tb.sheet">HOJA</span>
+        <span class="tb-value">A-01</span>
+      </div>
+    </div>
+    <div class="tb-bottom mono">
+      <span id="tb-rights">© 2026 Arcobox — Todos los derechos reservados</span>
+      <span>AR·CO·B·O·X — Arquitectura Consulting Barcelona Oliete Xavier</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
