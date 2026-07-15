@@ -354,6 +354,42 @@ body::after { right: 18px; }
   html { scroll-behavior: auto; }
 }
 
+/* ── Anotaciones a mano alzada ── */
+.scribble {
+  font-family: "Caveat", "Bradley Hand", cursive;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.05;
+  color: var(--accent);
+}
+.scribble-inline {
+  display: inline-block;
+  transform: rotate(-3deg);
+  margin-top: 0.6rem;
+}
+.p-note {
+  position: absolute;
+  top: -2.3rem;
+  right: 0;
+  transform: rotate(-4deg);
+  white-space: nowrap;
+  font-size: 1.15rem;
+}
+.founder-note {
+  position: absolute;
+  top: -1.5rem;
+  right: -0.4rem;
+  transform: rotate(2.5deg);
+  white-space: nowrap;
+}
+.send-row {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+}
+.send-row .scribble { transform: rotate(-3deg); }
+
 /* ══════════════ SECCIONES ══════════════ */
 .section {
   padding: clamp(4rem, 9vh, 6.5rem) var(--gutter);
@@ -367,6 +403,19 @@ body::after { right: 18px; }
   border-bottom: 1px solid var(--line);
 }
 .section-alt > * { max-width: 1280px; margin-left: auto; margin-right: auto; }
+
+/* sección oscura: tinta sobre tinta, como el reverso del plano */
+.section-dark {
+  max-width: none;
+  background: var(--ink);
+  color: var(--paper);
+  padding-top: clamp(3.5rem, 7vh, 5rem);
+  padding-bottom: clamp(3.5rem, 7vh, 5rem);
+}
+.section-dark > * { max-width: 1280px; margin-left: auto; margin-right: auto; }
+.section-dark .kicker { color: rgba(241, 235, 223, 0.65); }
+.section-dark .section-intro { color: rgba(241, 235, 223, 0.75); }
+.section-dark .section-head { margin-bottom: 2.2rem; }
 
 .section-head { margin-bottom: 3rem; }
 .section-head h2 {
@@ -518,6 +567,7 @@ body::after { right: 18px; }
 .studio-text p:not(.studio-p1) { color: var(--ink-soft); margin-bottom: 2.2rem; }
 
 .founder {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -551,6 +601,47 @@ body::after { right: 18px; }
   letter-spacing: 0.18em;
   color: var(--ink-soft);
 }
+
+/* ── Colaboradores ── */
+.collab-wrap { position: relative; }
+.collab-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  max-width: 56rem;
+}
+.collab-chips li {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  border: 1px solid rgba(241, 235, 223, 0.45);
+  padding: 0.7rem 1.2rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.collab-chips li:hover {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+.collab-note {
+  display: inline-block;
+  margin-top: 1.2rem;
+  transform: rotate(-3deg);
+}
+/* los perfiles entran escalonados */
+.collab-wrap .collab-chips li {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.45s ease, transform 0.45s ease, background 0.2s, color 0.2s, border-color 0.2s;
+}
+.collab-wrap.in .collab-chips li { opacity: 1; transform: none; }
+.collab-wrap.in .collab-chips li:nth-child(1) { transition-delay: 0.05s; }
+.collab-wrap.in .collab-chips li:nth-child(2) { transition-delay: 0.13s; }
+.collab-wrap.in .collab-chips li:nth-child(3) { transition-delay: 0.21s; }
+.collab-wrap.in .collab-chips li:nth-child(4) { transition-delay: 0.29s; }
+.collab-wrap.in .collab-chips li:nth-child(5) { transition-delay: 0.37s; }
+.collab-wrap.in .collab-chips li:nth-child(6) { transition-delay: 0.45s; }
 
 /* ── Proyectos ── */
 .filters {
@@ -763,6 +854,7 @@ body::after { right: 18px; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .acronym .acr-row { opacity: 1; transform: none; transition: none; }
+  .collab-wrap .collab-chips li { opacity: 1; transform: none; transition: none; }
 }
 
 /* ══════════════ RESPONSIVE ══════════════ */
@@ -772,6 +864,13 @@ body::after { right: 18px; }
   .process { grid-template-columns: repeat(2, 1fr); row-gap: 2rem; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-art { max-width: 420px; margin: 0 auto; }
+  /* en columnas estrechas la nota fluye tras el número de fase */
+  .p-note {
+    position: static;
+    display: inline-block;
+    margin-left: 0.6rem;
+    white-space: normal;
+  }
 }
 
 @media (max-width: 760px) {

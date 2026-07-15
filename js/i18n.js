@@ -49,8 +49,26 @@ const I18N = {
       name: "Xavier Oliete Bargués",
       role: "Arquitecto jefe y fundador"
     },
+    collab: {
+      kicker: "04 — Con quién trabajamos",
+      title: "No construimos solos",
+      intro: "Cada obra reúne un equipo a medida: una red estable de constructoras, ingenierías e industriales de confianza, coordinada desde el estudio.",
+      c1: "Constructoras",
+      c2: "Ingeniería de estructuras",
+      c3: "Ingeniería de instalaciones",
+      c4: "Arquitectura técnica",
+      c5: "Geotecnia y topografía",
+      c6: "Industriales y gremios"
+    },
+    notes: {
+      licenses: "aquí, paciencia…",
+      founder: "el que firma los planos",
+      photos: "fotos de obra, muy pronto",
+      form: "consulta sin compromiso",
+      collab: "cada obra, su equipo"
+    },
     projects: {
-      kicker: "04 — Trabajo",
+      kicker: "05 — Trabajo",
       title: "Proyectos",
       intro: "Selección de obra construida y proyectos en curso.",
       fAll: "Todos", fNew: "Obra nueva", fRehab: "Rehabilitación", fRef: "Reformas",
@@ -59,7 +77,7 @@ const I18N = {
       cats: { "obra-nueva": "Obra nueva", "rehabilitacion": "Rehabilitación", "reforma": "Reforma" }
     },
     contact: {
-      kicker: "05 — Contacto",
+      kicker: "06 — Contacto",
       title: "Hablemos de tu proyecto",
       addressLabel: "Estudio",
       address: "C. de Joan Blanques, 47, bajos<br>08012 Barcelona — Vila de Gràcia",
@@ -129,8 +147,26 @@ const I18N = {
       name: "Xavier Oliete Bargués",
       role: "Arquitecte en cap i fundador"
     },
+    collab: {
+      kicker: "04 — Amb qui treballem",
+      title: "No construïm sols",
+      intro: "Cada obra reuneix un equip a mida: una xarxa estable de constructores, enginyeries i industrials de confiança, coordinada des de l'estudi.",
+      c1: "Constructores",
+      c2: "Enginyeria d'estructures",
+      c3: "Enginyeria d'instal·lacions",
+      c4: "Arquitectura tècnica",
+      c5: "Geotècnia i topografia",
+      c6: "Industrials i gremis"
+    },
+    notes: {
+      licenses: "aquí, paciència…",
+      founder: "el qui signa els plànols",
+      photos: "fotos d'obra, ben aviat",
+      form: "consulta sense compromís",
+      collab: "cada obra, el seu equip"
+    },
     projects: {
-      kicker: "04 — Treball",
+      kicker: "05 — Treball",
       title: "Projectes",
       intro: "Selecció d'obra construïda i projectes en curs.",
       fAll: "Tots", fNew: "Obra nova", fRehab: "Rehabilitació", fRef: "Reformes",
@@ -139,7 +175,7 @@ const I18N = {
       cats: { "obra-nueva": "Obra nova", "rehabilitacion": "Rehabilitació", "reforma": "Reforma" }
     },
     contact: {
-      kicker: "05 — Contacte",
+      kicker: "06 — Contacte",
       title: "Parlem del teu projecte",
       addressLabel: "Estudi",
       address: "C. de Joan Blanques, 47, baixos<br>08012 Barcelona — Vila de Gràcia",
@@ -209,8 +245,26 @@ const I18N = {
       name: "Xavier Oliete Bargués",
       role: "Chief architect & founder"
     },
+    collab: {
+      kicker: "04 — Who we work with",
+      title: "We don't build alone",
+      intro: "Every project brings together a tailor-made team: a stable network of trusted builders, engineers and trades, coordinated from the studio.",
+      c1: "Building contractors",
+      c2: "Structural engineering",
+      c3: "Building services engineering",
+      c4: "Technical architects",
+      c5: "Geotechnics & surveying",
+      c6: "Trades & suppliers"
+    },
+    notes: {
+      licenses: "patience required…",
+      founder: "the one who signs the drawings",
+      photos: "site photos coming soon",
+      form: "no strings attached",
+      collab: "every project, its own crew"
+    },
     projects: {
-      kicker: "04 — Work",
+      kicker: "05 — Work",
       title: "Projects",
       intro: "A selection of built work and ongoing projects.",
       fAll: "All", fNew: "New build", fRehab: "Refurbishment", fRef: "Renovations",
@@ -219,7 +273,7 @@ const I18N = {
       cats: { "obra-nueva": "New build", "rehabilitacion": "Refurbishment", "reforma": "Renovation" }
     },
     contact: {
-      kicker: "05 — Contact",
+      kicker: "06 — Contact",
       title: "Let's talk about your project",
       addressLabel: "Studio",
       address: "C. de Joan Blanques, 47, ground floor<br>08012 Barcelona — Vila de Gràcia",

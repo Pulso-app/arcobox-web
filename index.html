@@ -217,6 +217,7 @@
         </li>
         <li class="reveal">
           <span class="mono p-num">F.03</span>
+          <span class="scribble p-note" aria-hidden="true" data-i18n="notes.licenses">aquí, paciencia…</span>
           <h3 data-i18n="process.p3.t">Licencias</h3>
           <p data-i18n="process.p3.d">Tramitación con el ayuntamiento y demás organismos.</p>
         </li>
@@ -251,6 +252,7 @@
           <p class="studio-p1" data-i18n="studio.p1">Arcobox son las siglas de Arquitectura Consulting Barcelona Oliete Xavier: el estudio fundado y dirigido por el arquitecto Xavier Oliete Bargués.</p>
           <p data-i18n="studio.p2">Trabajamos entre la escala del edificio y la del detalle: obra nueva, rehabilitación y consultoría técnica para particulares, comunidades y promotores. Un interlocutor único desde el primer día hasta el final de obra.</p>
           <div class="founder">
+            <span class="scribble founder-note" aria-hidden="true" data-i18n="notes.founder">el que firma los planos</span>
             <span class="founder-badge" aria-hidden="true">X.O.</span>
             <div>
               <strong data-i18n="studio.name">Xavier Oliete Bargués</strong>
@@ -261,12 +263,33 @@
       </div>
     </section>
 
+    <!-- ══════════════ COLABORADORES ══════════════ -->
+    <section id="colaboradores" class="section section-dark">
+      <div class="section-head reveal">
+        <p class="kicker mono" data-i18n="collab.kicker">04 — Con quién trabajamos</p>
+        <h2 data-i18n="collab.title">No construimos solos</h2>
+        <p class="section-intro" data-i18n="collab.intro">Cada obra reúne un equipo a medida: una red estable de constructoras, ingenierías e industriales de confianza, coordinada desde el estudio.</p>
+      </div>
+      <div class="collab-wrap reveal">
+        <ul class="collab-chips mono">
+          <li data-i18n="collab.c1">Constructoras</li>
+          <li data-i18n="collab.c2">Ingeniería de estructuras</li>
+          <li data-i18n="collab.c3">Ingeniería de instalaciones</li>
+          <li data-i18n="collab.c4">Arquitectura técnica</li>
+          <li data-i18n="collab.c5">Geotecnia y topografía</li>
+          <li data-i18n="collab.c6">Industriales y gremios</li>
+        </ul>
+        <span class="scribble collab-note" aria-hidden="true" data-i18n="notes.collab">cada obra, su equipo</span>
+      </div>
+    </section>
+
     <!-- ══════════════ PROYECTOS ══════════════ -->
     <section id="proyectos" class="section section-alt">
       <div class="section-head reveal">
-        <p class="kicker mono" data-i18n="projects.kicker">04 — Trabajo</p>
+        <p class="kicker mono" data-i18n="projects.kicker">05 — Trabajo</p>
         <h2 data-i18n="projects.title">Proyectos</h2>
         <p class="section-intro" data-i18n="projects.intro">Selección de obra construida y proyectos en curso.</p>
+        <span class="scribble scribble-inline" aria-hidden="true" data-i18n="notes.photos">fotos de obra, muy pronto</span>
       </div>
       <div class="filters mono" role="tablist" aria-label="Filtro de proyectos">
         <button type="button" class="active" data-filter="all" data-i18n="projects.fAll">Todos</button>
@@ -281,7 +304,7 @@
     <!-- ══════════════ CONTACTO ══════════════ -->
     <section id="contacto" class="section">
       <div class="section-head reveal">
-        <p class="kicker mono" data-i18n="contact.kicker">05 — Contacto</p>
+        <p class="kicker mono" data-i18n="contact.kicker">06 — Contacto</p>
         <h2 data-i18n="contact.title">Hablemos de tu proyecto</h2>
       </div>
       <div class="contact-grid">
@@ -313,7 +336,10 @@
             <span class="mono" data-i18n="form.msg">Cuéntanos tu proyecto</span>
             <textarea name="message" rows="5" required></textarea>
           </label>
-          <button type="submit" class="btn btn-solid" data-i18n="form.send">Enviar</button>
+          <div class="send-row">
+            <button type="submit" class="btn btn-solid" data-i18n="form.send">Enviar</button>
+            <span class="scribble" aria-hidden="true" data-i18n="notes.form">consulta sin compromiso</span>
+          </div>
           <p class="form-note mono" data-i18n="form.note">El formulario abre tu aplicación de correo.</p>
         </form>
       </div>
