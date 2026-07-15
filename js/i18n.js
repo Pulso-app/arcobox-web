@@ -17,7 +17,8 @@ const I18N = {
       lead: "Arquitectura, consultoría y dirección de obra desde el barrio de Gràcia. Del primer croquis a la entrega de llaves.",
       cta1: "Ver proyectos",
       cta2: "Hablemos",
-      caption: "Alzado tipo — Vila de Gràcia · E 1:100"
+      caption: "Alzado tipo — Vila de Gràcia · E 1:100",
+      note: "acceso por Joan Blanques"
     },
     marquee: "Obra nueva · Rehabilitación · Proyectos · Dirección de obra · Cédulas de habitabilidad · Informes técnicos · Asesoramiento",
     services: {
@@ -38,7 +39,7 @@ const I18N = {
       p2: { t: "Proyecto", d: "Del anteproyecto al proyecto ejecutivo, con presupuesto realista." },
       p3: { t: "Licencias", d: "Tramitación con el ayuntamiento y demás organismos." },
       p4: { t: "Obra", d: "Dirección facultativa, control de calidad y de costes." },
-      p5: { t: "Entrega", d: "Fin de obra, legalizaciones y garantía posventa." }
+      p5: { t: "Entrega", d: "Fin de obra, legalizaciones y cierre del expediente." }
     },
     studio: {
       kicker: "03 — El estudio",
@@ -96,7 +97,8 @@ const I18N = {
       lead: "Arquitectura, consultoria i direcció d'obra des del barri de Gràcia. Del primer croquis al lliurament de claus.",
       cta1: "Veure projectes",
       cta2: "Parlem-ne",
-      caption: "Alçat tipus — Vila de Gràcia · E 1:100"
+      caption: "Alçat tipus — Vila de Gràcia · E 1:100",
+      note: "accés per Joan Blanques"
     },
     marquee: "Obra nova · Rehabilitació · Projectes · Direcció d'obra · Cèdules d'habitabilitat · Informes tècnics · Assessorament",
     services: {
@@ -117,7 +119,7 @@ const I18N = {
       p2: { t: "Projecte", d: "De l'avantprojecte al projecte executiu, amb pressupost realista." },
       p3: { t: "Llicències", d: "Tramitació amb l'ajuntament i la resta d'organismes." },
       p4: { t: "Obra", d: "Direcció facultativa, control de qualitat i de costos." },
-      p5: { t: "Lliurament", d: "Final d'obra, legalitzacions i garantia postvenda." }
+      p5: { t: "Lliurament", d: "Final d'obra, legalitzacions i tancament de l'expedient." }
     },
     studio: {
       kicker: "03 — L'estudi",
@@ -175,7 +177,8 @@ const I18N = {
       lead: "Architecture, consulting and construction management from the Gràcia neighbourhood. From first sketch to key handover.",
       cta1: "See projects",
       cta2: "Let's talk",
-      caption: "Typical elevation — Vila de Gràcia · 1:100"
+      caption: "Typical elevation — Vila de Gràcia · 1:100",
+      note: "entrance on Joan Blanques"
     },
     marquee: "New builds · Refurbishment · Design · Construction management · Habitability certificates · Technical reports · Consulting",
     services: {
@@ -196,7 +199,7 @@ const I18N = {
       p2: { t: "Design", d: "From concept design to construction documents, with a realistic budget." },
       p3: { t: "Permits", d: "Filing with the city council and other authorities." },
       p4: { t: "Construction", d: "Site direction, quality and cost control." },
-      p5: { t: "Handover", d: "Completion, legal registration and after-sales warranty." }
+      p5: { t: "Handover", d: "Completion, legal registration and file closure." }
     },
     studio: {
       kicker: "03 — The studio",

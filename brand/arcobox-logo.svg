@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="180" viewBox="0 0 560 180">
+  <!--
+    Logo Arcobox — caja + palabra (Fraunces 800) y subtítulo (Space Mono).
+    Nota: este SVG carga las tipografías de Google Fonts, así que se ve
+    perfecto en navegadores con conexión. Para imprenta o apps de diseño,
+    usa los PNG de esta misma carpeta o instala las fuentes Fraunces y
+    Space Mono (ambas gratuitas, licencia OFL).
+  -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&amp;family=Space+Mono&amp;display=swap');
+    .word { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 66px; letter-spacing: 8px; }
+    .sub  { font-family: 'Space Mono', 'Courier New', monospace; font-size: 15px; letter-spacing: 8px; }
+  </style>
+  <rect x="9" y="9" width="542" height="108" fill="none" stroke="#17140E" stroke-width="12"/>
+  <text class="word" x="284" y="86" text-anchor="middle" fill="#17140E">ARCOBOX</text>
+  <text class="sub" x="12" y="158" fill="#5A5344">ARQUITECTURA · BCN</text>
+</svg>

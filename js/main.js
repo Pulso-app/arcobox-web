@@ -147,6 +147,8 @@
         const stamp = document.createElement("span");
         stamp.className = "pc-stamp";
         stamp.textContent = t("projects.sample");
+        // rotación ligeramente distinta en cada sello, como puestos a mano
+        stamp.style.transform = `rotate(${((PROJECTS.indexOf(p) * 47) % 9) - 4}deg)`;
         li.appendChild(stamp);
       }
 
@@ -243,15 +245,30 @@
   /* ── animación de entrada ── */
   function initReveal() {
     const els = $$(".reveal");
+
+    // las tarjetas y fases entran escalonadas
+    $$(".services-grid .card").forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 3) * 90}ms`;
+    });
+    $$(".process li").forEach((el, i) => {
+      el.style.transitionDelay = `${i * 70}ms`;
+    });
+
+    const done = (el) => {
+      el.classList.add("in");
+      // el retardo solo sirve para la entrada; después estorba al hover
+      setTimeout(() => { el.style.transitionDelay = ""; }, 1200);
+    };
+
     if (!("IntersectionObserver" in window)) {
-      els.forEach((el) => el.classList.add("in"));
+      els.forEach(done);
       return;
     }
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("in");
+            done(entry.target);
             io.unobserve(entry.target);
           }
         });
@@ -259,6 +276,54 @@
       { threshold: 0.12 }
     );
     els.forEach((el) => io.observe(el));
+  }
+
+  /* ── el alzado del hero se dibuja trazo a trazo ── */
+  function drawHeroArt() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const svg = $(".hero-art svg");
+    if (!svg || typeof svg.querySelectorAll !== "function") return;
+
+    let delay = 150;
+    $$("line, rect, path, circle", svg).forEach((el) => {
+      // los elementos ya discontinuos (el sol) se funden en vez de trazarse
+      if (el.hasAttribute("stroke-dasharray")) {
+        el.style.opacity = "0";
+        el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay, fill: "forwards" });
+        delay += 14;
+        return;
+      }
+      let len = 0;
+      try { len = el.getTotalLength(); } catch (e) { return; }
+      if (!len || !isFinite(len)) return;
+
+      el.style.strokeDasharray = String(len);
+      el.style.strokeDashoffset = String(len);
+      const hasFill = el.getAttribute("fill") && el.getAttribute("fill") !== "none";
+      if (hasFill) el.style.fillOpacity = "0";
+
+      const dur = Math.min(650, Math.max(160, len * 2.2));
+      el.animate([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], {
+        duration: dur, delay, easing: "ease-out", fill: "forwards"
+      });
+      if (hasFill) {
+        el.animate([{ fillOpacity: 0 }, { fillOpacity: 1 }], {
+          duration: 450, delay: delay + dur, fill: "forwards"
+        });
+      }
+      delay += 14;
+    });
+
+    const label = $("text", svg);
+    if (label) {
+      label.style.opacity = "0";
+      label.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400, delay: delay + 150, fill: "forwards" });
+    }
+    // la nota manuscrita y la flecha aparecen al final
+    $$(".art-note, .art-arrow").forEach((el) => {
+      el.style.opacity = "0";
+      el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: delay + 400, fill: "forwards" });
+    });
   }
 
   /* ── arranque ── */
@@ -271,5 +336,6 @@
     initBurger();
     applyLang(detectLang());
     initReveal();
+    drawHeroArt();
   });
 })();
